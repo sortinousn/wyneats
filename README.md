@@ -38,7 +38,7 @@ Rubric Criterion | Points
 Ability to search or filter, use of React Router | 10
 Code formatting and quality: indentation, variable and file naming conventions, etc. | 10
 No unused variables or imports, compiler errors | 10
-Use of class components when state is needed and functional components when state is not | 10
+Use of class components or react hooks when state is needed and functional components when state is not | 10
 Proper use of environment variables for API keys or CORS proxy if needed | 10
 Overall look and feel of application, well organized CSS files | 10
 Well written documentation | 10
