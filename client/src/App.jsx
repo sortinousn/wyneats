@@ -1,4 +1,6 @@
 import React from 'react';
+import Home from './components/Home'
+import Footer from './components/Footer'
 import './App.css';
 
 class App extends React.Component {
@@ -10,12 +12,22 @@ class App extends React.Component {
       .then(data => this.setState({ serverMessage: data.message }));
   }
 
+   render() {
+    return (
+      <Home></Home>
+    );
+  }
+
+
   render() {
     return (
-      <div id="demo">
-        <h1>Hello from client/src/App.js</h1>
-        <h1>{this.state.serverMessage}</h1>
-      </div>
+      <Header></Header>
+    );
+  }
+
+  render() {
+    return (
+      <Footer></Footer>
     );
   }
 }
