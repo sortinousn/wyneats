@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import contact from './components/Contact';
 import Home from './components/Home';
+import Favorites from './components/Favorites';
+
 
 function App() {
   return (
@@ -22,16 +24,19 @@ function App() {
               <li>
                 <Link to="/contact">Contact</Link>
               </li>
+              <li>
+                <Link to="/favorites">Favorites</Link>
+              </li>
             </ul>
           </nav>
         </div>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/Myeats" />
+          <Route path="/Favorites" component={Favorites}/>
           <Route path="/About" />
           <Route exact path="/contact" component={contact} />
         </Switch>
-        '
       </Router>
     </Fragment>
   );
