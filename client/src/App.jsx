@@ -30,6 +30,7 @@ class App extends React.Component {
 
   render() {
     return (
+      <React.Fragment>
       <Resturant/>
 
       // <div id="demo">
@@ -37,6 +38,7 @@ class App extends React.Component {
       //   <h1>{this.state.serverMessage}</h1>
       // </div>
       <Footer></Footer>
+      </React.Fragment>
     );
   }
 }
