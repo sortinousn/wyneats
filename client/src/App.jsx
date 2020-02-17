@@ -2,12 +2,15 @@ import React from 'react';
 import Home from './components/Home'
 import Footer from './components/Footer'
 import './App.css';
+import "./"
+import "./components/MyEats"
+import Resturant from './components/MyEats';
 
 class App extends React.Component {
   state = { serverMessage: '' };
 
   componentDidMount() {
-    fetch('/api/demo')
+    fetch('/client/src/components/MyEats.js')
       .then(response => response.json())
       .then(data => this.setState({ serverMessage: data.message }));
   }
@@ -27,6 +30,12 @@ class App extends React.Component {
 
   render() {
     return (
+      <Resturant/>
+
+      // <div id="demo">
+      //   <h1>Hello from client/src/App.js</h1>
+      //   <h1>{this.state.serverMessage}</h1>
+      // </div>
       <Footer></Footer>
     );
   }
