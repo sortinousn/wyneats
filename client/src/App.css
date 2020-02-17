@@ -11,7 +11,16 @@
   display: grid;
   place-items: center;
 }
-
+.card-img {
+  height: 250px;
+  object-fit: cover;
+  width: 50px;
+}
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+} 
 /* END DEMO */
 
 body{

@@ -1,5 +1,7 @@
 import React, {useEffect,useState,Fragment} from "react"
 import axios from "axios"
+import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
 
 function Resturant() {
     const [apiData, setApiData] = useState([])
@@ -40,15 +42,39 @@ setQuery(search)
     return(
         
         
-    <Fragment>
-        <h1>Wynwood Eats</h1>
+    <>
+        <h1>WynEats</h1>
         <form onSubmit={handleSubmit}> 
-        <input type="text" placeholder="Search for some wynwood eats!" onChange={handleChange} />
+        <input type="text" placeholder="Get Eats!" onChange={handleChange} />
         </form>
-        <ul>
-            apiData.map()
-        </ul>
-        </Fragment>
+        <div className="cards">
+            {
+                apiData && apiData.map(resturant => {
+                    return(
+
+                        resturant.image_url && resturant.location.zip_code=== '33127' &&
+
+                        <Card style={{ width: '18rem', margin: '1rem' }}>
+                            <Card.Img variant="top" src={resturant.image_url}  className="card-img"/>
+                            <Card.Body>
+                            <Card.Title>{resturant.name}</Card.Title>
+                            <Card.Text>
+                            {`Location: ${resturant.location.address1} ${resturant.location.zip_code}`}
+                            {`Services:${resturant.transactions}`}
+                            </Card.Text>
+                            <Button variant="primary"pnclick={resturant.url}>
+                                More Details
+                            </Button>
+                            </Card.Body>
+                            <Card.Footer>
+                            <big className="text-muted">Rating: {resturant.rating}</big>
+                            </Card.Footer>
+                        </Card>
+                    )
+                })
+            }
+        </div>
+        </>
     )
 };
     
