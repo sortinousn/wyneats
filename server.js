@@ -37,7 +37,7 @@ app.get('/api/restaurants/search/:location/:term', (request, response) => {
     }
   })
   .then(yelpResponse => response.json(yelpResponse.data.businesses || []))
-  .catch(err => response.send([]))
+  .catch(err => response.send(err))
 })
 
 

@@ -3,6 +3,8 @@ import './App.css';
 import "./"
 import "./components/MyEats"
 import Resturant from './components/MyEats';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 class App extends React.Component {
   state = { serverMessage: '' };
@@ -15,6 +17,7 @@ class App extends React.Component {
 
   render() {
     return (
+      
       <Resturant/>
 
       // <div id="demo">
