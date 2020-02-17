@@ -45,11 +45,6 @@ function App() {
     </Fragment>
   );
   }
-  render() {
-    return (
-      <Resturant/>
-    );
-  }
-}
+
         
 export default App;
