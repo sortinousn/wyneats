@@ -3,7 +3,7 @@ import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-function Resturant() {
+function MyEats() {
   const [apiData, setApiData] = useState([]);
   const [query, setQuery] = useState('');
   const [search, setSearch] = useState('');
@@ -105,4 +105,4 @@ function Resturant() {
 //     )
 // };
 //  Resturant()
-export default Resturant;
+export default MyEats;
