@@ -33,7 +33,7 @@ function MyEats(props) {
   const openResturantURL = () => {
     //const url = resturant.url;
     //window.open(url, '_blank');
-    console.log(props)
+    console.log(props);
 }
 
 
@@ -63,9 +63,11 @@ function MyEats(props) {
                       {`Location: ${resturant.location.address1} ${resturant.location.zip_code} `}
                       {`Services: ${resturant.transactions}`}
                     </Card.Text>
-                    <Button className="detail-button" variant="primary" onClick={openResturantURL}>
-                      More Details
-                    </Button>
+                    <a href={resturant.url}>
+                      <Button className="detail-button" variant="primary">
+                        More Details
+                      </Button>
+                    </a>
                     <Button variant="outline-danger">Favorite!</Button>
                   </Card.Body>
                   <Card.Footer>
