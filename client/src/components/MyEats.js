@@ -3,7 +3,7 @@ import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-function MyEats() {
+function MyEats(props) {
   const [apiData, setApiData] = useState([]);
   const [query, setQuery] = useState('food');
   const [search, setSearch] = useState('');
@@ -30,6 +30,13 @@ function MyEats() {
     setQuery(search);
   };
 
+  const openResturantURL = () => {
+    //const url = resturant.url;
+    //window.open(url, '_blank');
+    console.log(props)
+}
+
+
   return (
     <>
     <div className='search'>
@@ -50,17 +57,16 @@ function MyEats() {
                     src={resturant.image_url}
                     className="card-img"
                   />
-                  <input type="image" src="heart.png" alt="Heart" />
-
                   <Card.Body>
                     <Card.Title>{resturant.name}</Card.Title>
                     <Card.Text>
-                      {`Location: ${resturant.location.address1} ${resturant.location.zip_code}`}
-                      {`Services:${resturant.transactions}`}
+                      {`Location: ${resturant.location.address1} ${resturant.location.zip_code} `}
+                      {`Services: ${resturant.transactions}`}
                     </Card.Text>
-                    <Button variant="primary" onClick={resturant.url}>
+                    <Button className="detail-button" variant="primary" onClick={openResturantURL}>
                       More Details
                     </Button>
+                    <Button variant="outline-danger">Favorite!</Button>
                   </Card.Body>
                   <Card.Footer>
                     <big className="text-muted">Rating: {resturant.rating}</big>
