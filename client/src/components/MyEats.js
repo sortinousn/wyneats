@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 
 function MyEats() {
   const [apiData, setApiData] = useState([]);
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState('food');
   const [search, setSearch] = useState('');
 
   useEffect(() => {
@@ -32,10 +32,12 @@ function MyEats() {
 
   return (
     <>
-      <h1>WynEats</h1>
+    <div className='search'>
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder="Get Eats!" onChange={handleChange} />
+        <Button onClick={handleSubmit}  className="search-button">Find Eats!</Button>
       </form>
+      </div>
       <div className="cards">
         {apiData &&
           apiData.map(resturant => {
@@ -48,13 +50,15 @@ function MyEats() {
                     src={resturant.image_url}
                     className="card-img"
                   />
+                  <input type="image" src="heart.png" alt="Heart" />
+
                   <Card.Body>
                     <Card.Title>{resturant.name}</Card.Title>
                     <Card.Text>
                       {`Location: ${resturant.location.address1} ${resturant.location.zip_code}`}
                       {`Services:${resturant.transactions}`}
                     </Card.Text>
-                    <Button variant="primary" pnclick={resturant.url}>
+                    <Button variant="primary" onClick={resturant.url}>
                       More Details
                     </Button>
                   </Card.Body>

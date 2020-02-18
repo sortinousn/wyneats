@@ -22,7 +22,7 @@
 .card-img {
   height: 250px;
   object-fit: cover;
-  width: 50px;
+  width: 286px;
 }
 .cards {
   display: flex;
@@ -113,4 +113,36 @@ a:hover {
   background-color: none;
   margin: 0;
   text-align: center;
+}
+
+.search{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+
+}
+
+
+form{
+
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.search-button{
+
+margin-left: 20px;
+
+}
+
+
+input{
+
+height: 46px;
+width: 300px
+
 }
