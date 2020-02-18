@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
-import "./components/MyEats"
+import MyEats from "./components/MyEats"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import contact from './components/Contact';
 import Home from './components/Home';
@@ -34,9 +34,9 @@ function App() {
         </div>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/Myeats" />
-          <Route path="/Favorites" component={Favorites}/>
-          <Route path="/About" />
+          <Route path="/myeats" component={MyEats} />
+          <Route path="/favorites" component={Favorites}/>
+          <Route path="/about" />
           <Route exact path="/contact" component={contact} />
         </Switch>
       </Router>
