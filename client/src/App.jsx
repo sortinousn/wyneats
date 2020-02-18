@@ -14,7 +14,7 @@ function App() {
   return (
     <Fragment>
       <Router>
-      <Header/>
+        <Header />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/findeats" component={FindEats} />

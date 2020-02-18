@@ -4,10 +4,17 @@
 }
 */
 #contact-form {
+  padding-top: 125px;
   width: 100%;
   align-items: center;
   padding-left: 200px;
   padding-right: 200px;
+  display: block;
+}
+label {
+  color: white;
+  font-weight: bold;
+  -webkit-text-stroke: 1px #fe98f4;
 }
 
 input,
@@ -22,8 +29,8 @@ label {
 /* Start About Page CSS */
 /* Start About Page CSS */
 
-#about-page{
-  text-align:center;
+#about-page {
+  text-align: center;
 }
 
 #about-bg {
@@ -70,7 +77,7 @@ label {
 }
 
 #atop {
-  background-image: url("./components/pics/atop.jpg");
+  background-image: url('./components/pics/atop.jpg');
   padding: 0px 0px;
   height: 400px;
 }

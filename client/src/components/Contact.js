@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import BCKG from './wynwood.jpeg';
 
 class Contact extends React.Component {
   constructor(props) {
@@ -33,7 +34,7 @@ class Contact extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App" className="background-img">
         <form
           id="contact-form"
           onSubmit={this.handleSubmit.bind(this)}
