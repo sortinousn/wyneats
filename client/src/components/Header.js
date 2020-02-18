@@ -10,6 +10,9 @@ function Header() {
           </a>
         </div>
         <div id="menu">
+        <span className="menu-buttons">
+            <a href="/findeats">FindEats</a>
+          </span>
           <span className="menu-buttons">
             <a href="/myeats">MyEats</a>
           </span>

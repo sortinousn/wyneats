@@ -14,15 +14,18 @@
   justify-content: center;
 }
 
-body {
+.background-img {
     background-image: url(./components/wynwood.jpeg);
     display: flex; 
+    position: absolute;
+    top:0;
     background-repeat: no-repeat;
     background-size: cover; 
     height: 100vh;
     width: 100vw;
     overflow: hidden;  
     color: white;
+    z-index: -10;
 }
 
 .eat {
@@ -44,16 +47,17 @@ body {
 
 .menu {
     display: flex;
-    justify-content: space-around;
-    padding: 50px;  
+    flex-wrap: wrap;
+    align-content: space-between;
     font-size: 80px;
     color: white;
     letter-spacing: 10px;
+    align-items: flex;
 } 
 
 .menu-buttons{
-    margin-right: 50px;
     justify-content: center;
+    
 } 
 
 .menu-buttons a {
@@ -63,6 +67,7 @@ body {
 #header-container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
@@ -72,7 +77,6 @@ body {
 
 .menu-buttons {
     display: flex;
-    font-size: 20px;
     margin: 0;
     padding-right: 50px;
 }
@@ -88,3 +92,39 @@ width: 100%;
 .mainNav {
     color: white;
 }
+
+.find-form{
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  
+  .search-button{
+  
+  margin-left: 20px;
+  
+  }
+  
+  
+  .find-input{
+  
+  height: 46px;
+  width: 300px
+  
+  }
+
+  .search{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  
+  }
+
+  .detail-button{
+
+    margin-right: 20px;
+  }
