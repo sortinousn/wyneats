@@ -16,6 +16,11 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
+
+
 // JUST FOR DEMO PURPOSES, PUT YOUR ACTUAL API CODE HERE
 app.get('/api/demo', (request, response) => {
   response.json({

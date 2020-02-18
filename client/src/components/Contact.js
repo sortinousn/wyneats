@@ -43,7 +43,7 @@ class contact extends React.Component {
             <label htmlFor="name">Name</label>
             <input
               type="text"
-              className="form-control"
+              className="form-control-sm"
               id="name"
               value={this.state.name}
               onChange={this.onNameChange.bind(this)}
@@ -53,7 +53,7 @@ class contact extends React.Component {
             <label htmlFor="exampleInputEmail1">Email address</label>
             <input
               type="email"
-              className="form-control"
+              className="form-control-sm"
               id="email"
               aria-describedby="emailHelp"
               value={this.state.email}

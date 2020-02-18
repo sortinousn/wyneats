@@ -6,4 +6,4 @@ const Favorites = () => {
     </React.Fragment> );
 }
  
-export default Favorites;s
+export default Favorites;
