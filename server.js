@@ -45,7 +45,7 @@ app.get('/api/restaurants/search/:location/:term', (request, response) => {
       }
     )
 
-    .then(yelpResponse => response.json(yelpResponse.data.businesses && console.log(yelpResponse)))
+    .then(yelpResponse => response.json(yelpResponse.data.businesses || []))
     .catch(err => response.send(err));
 
   });
