@@ -14,3 +14,146 @@ input,
 label {
   display: block;
 }
+
+/* Start About Page CSS */
+/* Start About Page CSS */
+/* Start About Page CSS */
+/* Start About Page CSS */
+/* Start About Page CSS */
+/* Start About Page CSS */
+
+#about-page{
+  text-align:center;
+}
+
+#about-bg {
+  background-color: #fff;
+  height: 100vh;
+  width: 100vh;
+  display: flex;
+  position: fixed;
+  z-index: -1;
+}
+
+#about-header {
+  background: #1be1ee;
+  width: 500px;
+  margin: 300px 33% 30px 33%;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#about-tier1 {
+  margin: 19px 12%;
+  background: #1be1ee;
+  border-radius: 8px;
+  padding: 30px 20px 1px 30px;
+  font-size: 28px;
+}
+
+#about-members {
+  display: initial;
+}
+
+.member-pics {
+  display: flex;
+  margin: 30px 15% 30px 15%;
+}
+
+.apics {
+  border-radius: 50%;
+}
+
+.member-about {
+  margin: 10% 0 0 3%;
+  font-size: 24px;
+}
+
+#atop {
+  background-image: url("./components/pics/atop.jpg");
+  padding: 0px 0px;
+  height: 400px;
+}
+
+#atop-pic {
+  width: 100%;
+  height: 750px;
+}
+
+#logo-place {
+  display: flex;
+  position: absolute;
+  top: 250px;
+  left: 36%;
+}
+
+#fork {
+  display: flex;
+  position: absolute;
+  top: 250px;
+  left: 9%;
+}
+
+#knife {
+  display: flex;
+  position: absolute;
+  top: 250px;
+  left: 65%;
+}
+
+#scroll-down1 {
+  display: flex;
+  position: absolute;
+  top: 750px;
+  left: 43%;
+}
+
+#abold-sum {
+  min-height: 1400px;
+  background: #ff98f4;
+  padding: 500px 10px;
+}
+
+.about-titles {
+  font-size: 10rem;
+  font-weight: 100;
+  color: #fff;
+  margin: 40px;
+  z-index: 99;
+}
+
+.about-titles:hover {
+  font-size: 10rem;
+  font-weight: 900;
+  color: #000;
+  margin: 40px;
+  z-index: 99;
+}
+
+#baconl {
+  top: 350vh;
+  z-index: 1;
+  display: flex;
+  position: initial;
+  float: left;
+}
+
+#baconr {
+  top: 350vh;
+  z-index: 1;
+  display: flex;
+  float: right;
+}
+
+#titles-holder {
+  margin: -200px 0 0 22%;
+  z-index: 99999;
+  position: absolute;
+  display: block;
+}
+
+/* End About Page CSS */
+/* End About Page CSS */
+/* End About Page CSS */
+/* End About Page CSS */
+/* End About Page CSS */
