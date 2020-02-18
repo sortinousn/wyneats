@@ -9,7 +9,7 @@ function MyEats() {
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    if (query === '') return;
+    // if (query === '') return;
     const getApiData = async () => {
       const result = await axios.get(
         `/api/restaurants/search/:wynwood/${query}`
@@ -18,6 +18,7 @@ function MyEats() {
       console.log(result.data);
     };
     getApiData();
+    console.log(apiData);
   }, [query]);
 
   const handleChange = event => {
