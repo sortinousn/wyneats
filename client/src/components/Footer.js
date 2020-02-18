@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
-const Footer = () => {
-  return (
-    <div>
-      <h1>This is the Footer</h1>
-    </div>
-  );
-};
+const Footer= () => {
+    return (
+      <div id="information">
+        <h4 class="footer"></h4>
+      </div>
+    );
+  }
 
 export default Footer;

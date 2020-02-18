@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-class contact extends React.Component {
+class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -91,4 +91,4 @@ class contact extends React.Component {
   }
 }
 
-export default contact;
+export default Contact;

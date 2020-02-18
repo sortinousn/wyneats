@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import BCKG from './wynwood.jpeg';
 
-const Home = () => {
+function Home(props) {
+  const handleOnClick = () => {
+    props.history.push(`/myeats`);
+  };
+
   return (
-    <div>
-      <h1>Home Page</h1>
+    <div className="background-img">
+      <button onClick={handleOnClick} className="eat" type="active">
+        Let's Eat
+      </button>
     </div>
   );
-};
-
+}
 export default Home;
