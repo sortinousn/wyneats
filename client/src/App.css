@@ -8,6 +8,7 @@
   object-fit: cover;
   width: 286px;
 }
+
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -45,18 +46,23 @@
 }
 
 .menu {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
-  font-size: 80px;
-  color: white;
-  letter-spacing: 10px;
-  align-items: flex;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    font-size: 80px;
+    color: white;
+    letter-spacing: 10px;
+    align-items: flex;
+} 
+
+#menu{
+    display: flex;
 }
 
-.menu-buttons {
-  justify-content: center;
-}
+.menu-buttons{
+    justify-content: center;
+    
+} 
 
 .menu-buttons a {
   color: white;
