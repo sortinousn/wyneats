@@ -1,12 +1,15 @@
-import React, { useEffect, useState, Fragment } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import RestaurantDetail from './RestaurantDetail';
+import { parseStringifiedJSON } from '../helpers';
 
 function FindEats(props) {
   const [apiData, setApiData] = useState([]);
   const [query, setQuery] = useState('food');
   const [search, setSearch] = useState('');
+  const [favorites, setFavorites] = useState([]);
+
 
   useEffect(() => {
     // if (query === '') return;
@@ -30,12 +33,12 @@ function FindEats(props) {
     setQuery(search);
   };
 
-  const addFavorite = () => {
-    //const url = resturant.url;
-    //window.open(url, '_blank');
-    console.log(props);
-}
-
+  const addFavorite = restaurant => {
+    const favoriteRestaurants = localStorage.getItem('FAVORITE_RESTAURANTS');
+    const parsedFavorites = parseStringifiedJSON(favoriteRestaurants, []) || []
+    const newFavorites = [...parsedFavorites, restaurant];
+    localStorage.setItem('FAVORITE_RESTAURANTS', JSON.stringify(newFavorites))
+  }
 
   return (
     <>
@@ -47,36 +50,11 @@ function FindEats(props) {
       </div>
       <div className="cards">
         {apiData &&
-          apiData.map(resturant => {
-            return (
-              resturant.image_url &&
-              resturant.location.zip_code === '33127' && (
-                <Card style={{ width: '18rem', margin: '1rem' }}>
-                  <Card.Img
-                    variant="top"
-                    src={resturant.image_url}
-                    className="card-img"
-                  />
-                  <Card.Body>
-                    <Card.Title>{resturant.name}</Card.Title>
-                    <Card.Text>
-                      {`Location: ${resturant.location.address1} ${resturant.location.zip_code} `}
-                      {`Services: ${resturant.transactions}`}
-                    </Card.Text>
-                    <a href={resturant.url}>
-                      <Button className="detail-button" variant="primary">
-                        More Details
-                      </Button>
-                    </a>
-                    <Button onClick={addFavorite} variant="outline-danger">Favorite!</Button>
-                  </Card.Body>
-                  <Card.Footer>
-                    <big className="text-muted">Rating: {resturant.rating}</big>
-                  </Card.Footer>
-                </Card>
-              )
-            );
-          })}
+          apiData.reduce((acc,  restaurant) => {
+            if (!(restaurant.image_url  && restaurant.location.zip_code === '33127')) return acc;
+            acc.push(<RestaurantDetail key={restaurant.id} restaurant={restaurant} addFavorite={addFavorite} />)
+            return acc;
+          }, [])}
       </div>
     </>
   );

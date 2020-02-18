@@ -1,9 +1,20 @@
-import React from 'react'
+import React,  { useEffect, useState } from 'react'
+import { parseStringifiedJSON } from '../helpers';
+import RestaurantDetail from './RestaurantDetail';
 
 const Favorites = () => {
-    return ( <React.Fragment>
+    const [favorites, setFavorites] = useState([]);
 
-    </React.Fragment> );
+    useEffect(() => {
+        const favoriteRestaurants = localStorage.getItem('FAVORITE_RESTAURANTS');
+        const parsedFavorites = parseStringifiedJSON(favoriteRestaurants, []) || [];
+        setFavorites(parsedFavorites);
+    }, [])
+    return (
+        <div className="favorite-container">
+            {favorites.map(restaurant => <RestaurantDetail key={restaurant.id} restaurant={restaurant} />)}
+        </div>
+    )
 }
  
 export default Favorites;

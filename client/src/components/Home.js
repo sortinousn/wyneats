@@ -4,7 +4,7 @@ import Header from './Header'
 
 function Home(props) {
   const handleOnClick = () => {
-    props.history.push(`/myeats`);
+    props.history.push(`/findeats`);
   };
 
   return (
