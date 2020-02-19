@@ -1,16 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import Form from 'react-bootstrap/Form';
+import Accordion from 'react-bootstrap/Accordion';
 import RestaurantDetail from './RestaurantDetail';
 import { parseStringifiedJSON } from '../helpers';
 import Loader from 'react-loader-spinner';
-var shuffle = require('shuffle-array')
+var shuffle = require('shuffle-array');
 
 function FindEats(props) {
   const [apiData, setApiData] = useState([]);
   const [query, setQuery] = useState('food');
   const [search, setSearch] = useState('');
-
+  const [budget, setBudget] = useState({
+    cheap: false,
+    average: false,
+    expensive: false
+  });
 
   useEffect(() => {
     //    if (query === '') return;
@@ -19,7 +26,7 @@ function FindEats(props) {
         `/api/restaurants/search/:wynwood/${query}`
       );
       setApiData(result.data);
-      console.log(apiData)
+      console.log(apiData);
     };
     getApiData();
   }, [query]);
@@ -43,18 +50,42 @@ function FindEats(props) {
   };
 
   const randomPlace = () => {
-
-    const shuffleData = shuffle(apiData)
+    const shuffleData = shuffle(apiData);
     setApiData(shuffleData);
-    const randomElement = apiData.slice(0, 1)
-    setApiData(randomElement)
-    console.log(randomElement)
+    const randomElement = apiData.slice(0, 1);
+    setApiData(randomElement);
+    console.log(randomElement);
+  };
 
-  }
+  const onChangeCheap = () => {
+    console.log(apiData[1].price);
+
+    //budget.cheap ? setApiData()
+  };
 
   return (
     <>
       <div className="search">
+        <Accordion className="filter-style" defaultActiveKey="0">
+          <Card className="filter-card">
+            <Accordion.Toggle as={Card.Header} eventKey="0">
+              Filter by Price
+            </Accordion.Toggle>
+            <Accordion.Collapse eventKey="0">
+              <div>
+                <Form.Check
+                  checked={budget.cheap}
+                  onChange={onChangeCheap}
+                  type="checkbox"
+                  id="cheap"
+                  label="Under $10"
+                />
+                <Form.Check type="checkbox" id="average" label="$11 - $30" />
+                <Form.Check type="checkbox" id="expensive" label="Over $30" />
+              </div>
+            </Accordion.Collapse>
+          </Card>
+        </Accordion>
         <form className="find-form" onSubmit={handleSubmit}>
           <input
             className="find-input"
@@ -65,13 +96,17 @@ function FindEats(props) {
           <Button type="submit" className="search-button">
             Find Eats!
           </Button>
-          <Button variant="info" type="submit" onClick={() => randomPlace()} className="search-button">
-        Random
-        </Button>
+          <Button
+            variant="info"
+            type="submit"
+            onClick={() => randomPlace()}
+            className="search-button"
+          >
+            Random
+          </Button>
         </form>
       </div>
-      <div>
-      </div>
+      <div></div>
       {apiData.length > 0 ? (
         <div className="cards">
           {apiData &&
