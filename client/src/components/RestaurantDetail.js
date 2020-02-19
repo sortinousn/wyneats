@@ -13,9 +13,14 @@ const RestaurantDetail = ({
     <Card.Body>
       <Card.Title>{restaurant.name}</Card.Title>
       <Card.Text>
-        {`Location: ${restaurant.location.address1} ${restaurant.location.zip_code} `}
-        {`Services: ${restaurant.transactions}`}
-      </Card.Text>
+                    <span>{`Location: ${restaurant.location.display_address}`} </span>
+                    <br/>
+                    <span>{ `Services: ${restaurant.transactions}`}</span>
+                    <br/>
+                    <span>{` Phone: ${restaurant.display_phone}`}</span>
+                    <br/>
+                    <span>{`Price:${restaurant.price} `}</span>
+                    </Card.Text>
       <a target="_blank" href={restaurant.url}>
         <Button className="detail-button" variant="primary">
           More Details
