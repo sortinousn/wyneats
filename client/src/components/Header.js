@@ -1,13 +1,14 @@
 import React from 'react';
 
+
 function Header() {
   return (
     <>
       <div id="header-container">
         <div id="logo">
-          <a className="logo-tag" href="/">
-            WynEats
-          </a>
+        <a href="/">
+         <img alt="wynlogo" src={require("./logo_v2.png")} width="190" height="120"/>
+      </a>
         </div>
         <div id="menu">
         <span className="menu-buttons">
