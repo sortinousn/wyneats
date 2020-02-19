@@ -16,7 +16,7 @@ const RestaurantDetail = ({
         {`Location: ${restaurant.location.address1} ${restaurant.location.zip_code} `}
         {`Services: ${restaurant.transactions}`}
       </Card.Text>
-      <a href={restaurant.url}>
+      <a target="_blank" href={restaurant.url}>
         <Button className="detail-button" variant="primary">
           More Details
         </Button>

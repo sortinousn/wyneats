@@ -42,14 +42,14 @@ function FindEats(props) {
   return (
     <>
       <div className="search">
-        <form className="find-form" submit={handleSubmit}>
+        <form className="find-form" onSubmit={handleSubmit}>
           <input
             className="find-input"
             type="text"
             placeholder="Get Eats!"
             onChange={handleChange}
           />
-          <Button onClick={handleSubmit} className="search-button">
+          <Button type="submit" className="search-button">
             Find Eats!
           </Button>
         </form>
