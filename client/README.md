@@ -1,68 +1,60 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+WynEats
 
-## Available Scripts
+What
+WynEats is an application designed to give the people of Wynwood a quick and engaging way to find places to eat nearby. The app is calling Yelp's API for past reviews and information on a clean and simple UI that allows the user to favorite their most loved restaurants as well as pick a random restuarant when picking is just too hard.
 
-In the project directory, you can run:
+Status
+The project is a work in progress. The backend still needs to be setup.
 
-### `npm start`
+Screenshots
+Landing Page:
+![Mainpage](Mainpage.png)
+FindEats:
+![FindEats](wyneats page.png)
+Favorites:
+![favorites](favorites.png)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Why
+After weeks of trying to find recommendations to eat around Wynwood at Wyncode Academy, our group saw a need to create a food site for restaurants exclusive to Wynwood. In addition to searching for new restuarants, we wanted to create a feature that enages the user to favorite the restaurants he or she wants to remember or refer others too. The app also has a feature that picks a random restaurant in case the user doesn't want the burder of having to pick!
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Who
+Jamile Reid
+Joseph Sortino
+Sonia St.Remy
+Lavonnyka Howell
+Dean Lovett
 
-### `npm test`
+Members of cohort 36 in Wyncode Academy
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+How:
+Dependencies
+WynEats was built using React. Our group used Visual Studio as our code editor.
 
-### `npm run build`
+Install
+We added the neccesary packages by including the following commands:
+add react-bootstrap bootstrap
+yarn add react-router-dom
+yarn add axios
+add .env into your folder and add the CLIENT_ID & YELP_API_KEY into the file. You can reach out to a code owner(listed under the Who) for these details
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run the application, Yarn install needs to be run in the premaster branch and inside client. Then Yarn Dev or Yarn Start can be run to view the application on the local host 3000.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Contribute
+If you want to contribute to the github, feel free to post an issue and contact one of the code owners. Once a member of the group reviews the purpose of the issue, we can take steps to work toward outside contribution.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+A git clone is neccesary and then the above mentioned dependencies are required. A contributor would need to create a seperate branch off of Premaster and commit up.
 
-### `npm run eject`
+Steps to Contribute
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. An issue can be created on the issues section of the repo's main page. Click "New Issues" and create the issue title and comment a summary of what the issue will resolve. Please assign the issue to yourself and label the issue as an "enhancement."
+2. Create a seperate branch off of premaster with the following commands:
+3. git checkout -b enhancement-(issuenumber)-(yourname)
+4. All of your changes will be saved in this branch. Please remember to command-s to save the changes
+5. Once your changes are ready to be merged to master "Premaster" branch, you can use the command: git add .
+6. Check git status to see that your addition was added. The addition should appear in git status and be in green if added
+7. Use the following command to commit up: git commit -m "short description of your change"
+8. Use the following command to push up: git commit -u origin (nameofbranch) or (enhancement-(issuenumber)-(yourname))
+9. In the repo, after the commit, an option in the pull requests section will say "Compare & Pull Request". Click that to create the Pull Request
+10. For the Pull Request, it can be the name of the branch and the commentary should be "closes #yourissuenumber. For example, if my issue was #2 my PR commentary would be "Closes #2."
+11. The label should be "enhancement" and the reviewers should be 2 of the members of the group. Again, please reference the Who section above
+12. After two members of the group review the code, someone can merge the pull request into the master "premaster"
