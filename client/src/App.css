@@ -46,23 +46,22 @@
 }
 
 .menu {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-    font-size: 80px;
-    color: white;
-    letter-spacing: 10px;
-    align-items: flex;
-} 
-
-#menu{
-    display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  font-size: 80px;
+  color: white;
+  letter-spacing: 10px;
+  align-items: flex;
 }
 
-.menu-buttons{
-    justify-content: center;
-    
-} 
+#menu {
+  display: flex;
+}
+
+.menu-buttons {
+  justify-content: center;
+}
 
 .menu-buttons a {
   color: white;
@@ -123,4 +122,13 @@ a:hover {
 
 .detail-button {
   margin-right: 20px;
+}
+
+.spinner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
 }

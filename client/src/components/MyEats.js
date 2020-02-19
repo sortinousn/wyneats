@@ -1,20 +1,38 @@
-import React,  { useEffect, useState } from 'react'
+import React, { useEffect, useState, useReducer } from 'react';
 import { parseStringifiedJSON } from '../helpers';
 import RestaurantDetail from './RestaurantDetail';
 
 const Favorites = () => {
-    const [favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState([]);
 
-    useEffect(() => {
-        const favoriteRestaurants = localStorage.getItem('FAVORITE_RESTAURANTS');
-        const parsedFavorites = parseStringifiedJSON(favoriteRestaurants, []) || [];
-        setFavorites(parsedFavorites);
-    }, [])
-    return (
-        <div className="favorite-container">
-            {favorites.map(restaurant => <RestaurantDetail key={restaurant.id} restaurant={restaurant} />)}
-        </div>
-    )
-}
- 
+  useEffect(() => {
+    const favoriteRestaurants = localStorage.getItem('FAVORITE_RESTAURANTS');
+    const parsedFavorites = parseStringifiedJSON(favoriteRestaurants, []) || [];
+    setFavorites(parsedFavorites);
+  }, []);
+
+  const removeFavorite = restaurant => {
+    const favoriteRestaurants = localStorage.getItem('FAVORITE_RESTAURANTS');
+    const parsedFavorites = parseStringifiedJSON(favoriteRestaurants, []) || [];
+    const arr = parsedFavorites.filter(item => item.id !== restaurant.id);
+    console.log(arr);
+    const newFavorites = arr;
+    localStorage.setItem('FAVORITE_RESTAURANTS', JSON.stringify(newFavorites));
+    setFavorites(newFavorites);
+  };
+
+  return (
+    <div className="cards">
+      {favorites.map(restaurant => (
+        <RestaurantDetail
+          favorite={restaurant.id}
+          key={restaurant.id}
+          restaurant={restaurant}
+          removeFavorite={removeFavorite}
+        />
+      ))}
+    </div>
+  );
+};
+
 export default Favorites;

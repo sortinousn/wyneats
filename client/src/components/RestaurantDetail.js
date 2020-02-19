@@ -2,14 +2,14 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-
-const RestaurantDetail = ({ restaurant, addFavorite }) => (
-    <Card style={{ width: '18rem', margin: '1rem' }}>
-    <Card.Img
-      variant="top"
-      src={restaurant.image_url}
-      className="card-img"
-    />
+const RestaurantDetail = ({
+  restaurant,
+  addFavorite,
+  favorite,
+  removeFavorite
+}) => (
+  <Card style={{ width: '18rem', margin: '1rem' }}>
+    <Card.Img variant="top" src={restaurant.image_url} className="card-img" />
     <Card.Body>
       <Card.Title>{restaurant.name}</Card.Title>
       <Card.Text>
@@ -21,13 +21,24 @@ const RestaurantDetail = ({ restaurant, addFavorite }) => (
           More Details
         </Button>
       </a>
-      <Button onClick={() => addFavorite(restaurant)}  variant="outline-danger">Favorite!</Button>
+
+      {restaurant.id === favorite ? (
+        <Button onClick={() => removeFavorite(restaurant)} variant="danger">
+          Unfavorite
+        </Button>
+      ) : (
+        <Button
+          onClick={() => addFavorite(restaurant)}
+          variant="outline-danger"
+        >
+          Favorite!
+        </Button>
+      )}
     </Card.Body>
     <Card.Footer>
       <big className="text-muted">Rating: {restaurant.rating}</big>
     </Card.Footer>
   </Card>
-)
-
+);
 
 export default RestaurantDetail;
