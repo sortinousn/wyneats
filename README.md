@@ -1,4 +1,4 @@
-WynEats
+*WynEats*
 
 What
 WynEats is an application designed to give the people of Wynwood a quick and engaging way to find places to eat nearby. The app is calling Yelp's API for past reviews and information on a clean and simple UI that allows the user to favorite their most loved restaurants as well as pick a random restuarant when picking is just too hard.
