@@ -9,8 +9,6 @@ The project is a work in progress. The backend still needs to be setup.
 ### Screenshots
 Landing Page:
 ![Mainpage](./client/src/components/Mainpage.png)
-FindEats:
-![FindEats](./client/src/components/wyneats page.png)
 Favorites:
 ![favorites](./client/src/components/favorites.png)
 
