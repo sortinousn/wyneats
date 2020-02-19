@@ -59,21 +59,26 @@ label {
 }
 
 #about-members {
-  display: initial;
+  display: flex;
+  padding: 1px 50vh 50px 50vh;
+  background: #902786;
+  color:#fff;
 }
 
 .member-pics {
-  display: flex;
-  margin: 30px 15% 30px 15%;
+  display: block;
+  margin: 10px 1px 10px 1px
 }
 
 .apics {
   border-radius: 50%;
+  width:110px;
+  height:auto;
 }
 
 .member-about {
   margin: 10% 0 0 3%;
-  font-size: 24px;
+  font-size: 14px;
 }
 
 #atop {
@@ -116,7 +121,7 @@ label {
 }
 
 #abold-sum {
-  min-height: 1400px;
+  min-height: 1350px;
   background: #ff98f4;
   padding: 500px 10px;
 }
@@ -157,6 +162,31 @@ label {
   z-index: 99999;
   position: absolute;
   display: block;
+}
+
+#about-text {
+    
+    margin: 5vh 30vh 0 30vh;
+    color: #fff;
+    font-size: 34px;
+    font-weight: 100;
+}
+
+#about-ppg {
+  display: inline-grid;
+}
+
+#about-htext {
+    color: #fff;
+    font-size: 85px;
+    font-weight: 200;
+    margin: 10vh 0vh 0 0;
+}
+
+#abottom-section {
+  background: #902786;
+  padding: 20px 0 60px 0;
+  border-top: solid 19px #fff;
 }
 
 /* End About Page CSS */
