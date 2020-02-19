@@ -37,7 +37,7 @@ export default function About() {
             <img src={knifepic} alt=" " />
           </span>
           <span id="scroll-down1">
-            <img src={scrollpic} alt=" " />
+            <a href="#abottom-section"><img src={scrollpic} alt=" " /></a>
           </span>
         </span>
       </div>
@@ -62,25 +62,24 @@ export default function About() {
             <h1 class="about-titles">Search</h1>
           </div>
         </div>
+        
       </div>
 
-      <div id="about-header">
-        <span class="aheaderz">
-          <h1> About WynEats </h1>
-        </span>
-      </div>
-      <div id="about-tier1">
-        <span class="atier1">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
-          </p>
-        </span>
-      </div>
+      <div id="abottom-section">
+            <div id="about-ppg">
+                <h3 id="about-htext">About WynEats</h3>
+                <p id="about-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur.
+                </p>
+            </div>
+        </div>
+
+      
       <div id="about-members">
         <div class="member-pics">
           <span id="joe-pic">
@@ -88,18 +87,13 @@ export default function About() {
               class="apics"
               src={joe}
               alt="Smiley face"
-              height="400"
-              width="auto"
+              
             />
           </span>
           <span id="joe-about" class="member-about">
+          <h4>Joe</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+            "The secret of getting ahead is getting started" - Mark Twain
             </p>
           </span>
         </div>
@@ -114,13 +108,9 @@ export default function About() {
             />
           </span>
           <span id="jamile-about" class="member-about">
+          <h4>Jamile</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+            "The secret of getting ahead is getting started" - Mark Twain
             </p>
           </span>
         </div>
@@ -135,13 +125,9 @@ export default function About() {
             />
           </span>
           <span id="lava-about" class="member-about">
+          <h4>Lava</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+            "The secret of getting ahead is getting started" - Mark Twain
             </p>
           </span>
         </div>
@@ -156,13 +142,9 @@ export default function About() {
             />
           </span>
           <span id="sonia-about" class="member-about">
+          <h4>Sonia</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+            "Permanent messages taught by temporary people. " - Unknown
             </p>
           </span>
         </div>
@@ -177,13 +159,9 @@ export default function About() {
             />
           </span>
           <span id="dean-about" class="member-about">
+              <h4>Dean</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+            "The secret of getting ahead is getting started" - Mark Twain
             </p>
           </span>
         </div>
