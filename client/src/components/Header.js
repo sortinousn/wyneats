@@ -7,7 +7,7 @@ function Header() {
       <div id="header-container">
         <div id="logo">
         <a href="/">
-         <img alt="wynlogo" src={require("./logo_v2.png")} width="190" height="120"/>
+         <img className="wynlogo" alt="wynlogo" src={require("./logo_v2.png")} width="220" height="150" margin-left="100px"/>
       </a>
         </div>
         <div id="menu">
