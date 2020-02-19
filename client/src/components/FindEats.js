@@ -4,11 +4,13 @@ import Button from 'react-bootstrap/Button';
 import RestaurantDetail from './RestaurantDetail';
 import { parseStringifiedJSON } from '../helpers';
 import Loader from 'react-loader-spinner';
+var shuffle = require('shuffle-array')
 
 function FindEats(props) {
   const [apiData, setApiData] = useState([]);
   const [query, setQuery] = useState('food');
   const [search, setSearch] = useState('');
+
 
   useEffect(() => {
     //    if (query === '') return;
@@ -17,6 +19,7 @@ function FindEats(props) {
         `/api/restaurants/search/:wynwood/${query}`
       );
       setApiData(result.data);
+      console.log(apiData)
     };
     getApiData();
   }, [query]);
@@ -39,6 +42,16 @@ function FindEats(props) {
     localStorage.setItem('FAVORITE_RESTAURANTS', JSON.stringify(newFavorites));
   };
 
+  const randomPlace = () => {
+
+    const shuffleData = shuffle(apiData)
+    setApiData(shuffleData);
+    const randomElement = apiData.slice(0, 1)
+    setApiData(randomElement)
+    console.log(randomElement)
+
+  }
+
   return (
     <>
       <div className="search">
@@ -52,7 +65,12 @@ function FindEats(props) {
           <Button type="submit" className="search-button">
             Find Eats!
           </Button>
+          <Button variant="info" type="submit" onClick={() => randomPlace()} className="search-button">
+        Random
+        </Button>
         </form>
+      </div>
+      <div>
       </div>
       {apiData.length > 0 ? (
         <div className="cards">
