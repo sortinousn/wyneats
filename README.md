@@ -1,63 +1,60 @@
-# Node / Create-React-App mashup
-Read the instructions thoroughly before starting your project.
+WynEats
 
-## Setup
-* `git clone` this repo
-* `cd` into it.
-* `yarn install`
-* `cd client && yarn install`
+What
+WynEats is an application designed to give the people of Wynwood a quick and engaging way to find places to eat nearby. The app is calling Yelp's API for past reviews and information on a clean and simple UI that allows the user to favorite their most loved restaurants as well as pick a random restuarant when picking is just too hard.
 
-## To run your Express.JS and React developer environment locally
-Make sure you are in your project's directory, and then:
-```
-yarn dev
-```
+Status
+The project is a work in progress. The backend still needs to be setup.
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits.
+Screenshots
+Landing Page:
+![Mainpage](Mainpage.png)
+FindEats:
+![FindEats](wyneats page.png)
+Favorites:
+![favorites](favorites.png)
 
-## To deploy
+Why
+After weeks of trying to find recommendations to eat around Wynwood at Wyncode Academy, our group saw a need to create a food site for restaurants exclusive to Wynwood. In addition to searching for new restuarants, we wanted to create a feature that enages the user to favorite the restaurants he or she wants to remember or refer others too. The app also has a feature that picks a random restaurant in case the user doesn't want the burder of having to pick!
 
-* `heroku create your-app-name`
-* `git push heroku master`
+Who
+Jamile Reid
+Joseph Sortino
+Sonia St.Remy
+Lavonnyka Howell
+Dean Lovett
 
-## Project Requirements
+Members of cohort 36 in Wyncode Academy
 
-* [ ] Your project should pull data from an API. There are lots of options [here](https://github.com/toddmotto/public-apis) and [here](https://market.mashape.com/).
-  * Avoid any APIs that require OAuth (we'll talk about that later).
-  * Many APIs require an API key. Just sign up for an account and attach the key to your URL. Please make sure not to share your secret keys in a public GitHub repo.
-  * Some APIs don't allow _Cross-Origin Resource Sharing_ (CORS), meaning you can't make AJAX requests to them. You can get around this by proxying your requests with your Express server.
-* [ ] Your project should render a list of data from the API.
-  * [ ] Your project should allow the list to be filtered or searched.
-* [ ] Your project should show details about a single resource when clicked.
-* [ ] Your project should look (really) pretty!
-* [ ] You and your team should employ good Git and GitHub collaboration practices.
-* [ ] Your project must have a README.md file explaining what the project does and why it matters. [Here's an example](https://github.com/codeforamerica/howto/blob/master/Good-READMEs.md) of a great README.md template.
+How:
+Dependencies
+WynEats was built using React. Our group used Visual Studio as our code editor.
 
-Rubric Criterion | Points
---- | ---
-Ability to search or filter, use of React Router | 10
-Code formatting and quality: indentation, variable and file naming conventions, etc. | 10
-No unused variables or imports, compiler errors | 10
-Use of class components or react hooks when state is needed and functional components when state is not | 10
-Proper use of environment variables for API keys or CORS proxy if needed | 10
-Overall look and feel of application, well organized CSS files | 10
-Well written documentation | 10
-Use of GitHub issues, branches and commit messages | 10
-Look and feel of demo slide deck | 10
-Ability to explain code decisions in demo | 10
-Ability to defend code decisions in response to panel questions | 10
+Install
+We added the neccesary packages by including the following commands:
+add react-bootstrap bootstrap
+yarn add react-router-dom
+yarn add axios
+add .env into your folder and add the CLIENT_ID & YELP_API_KEY into the file. You can reach out to a code owner(listed under the Who) for these details
 
-## Bonus
+To run the application, Yarn install needs to be run in the premaster branch and inside client. Then Yarn Dev or Yarn Start can be run to view the application on the local host 3000.
 
-* Fanciful animations and transitions
-* Incorporate multiple APIs into a single app
+Contribute
+If you want to contribute to the github, feel free to post an issue and contact one of the code owners. Once a member of the group reviews the purpose of the issue, we can take steps to work toward outside contribution.
 
-## Demo Requirements
+A git clone is neccesary and then the above mentioned dependencies are required. A contributor would need to create a seperate branch off of Premaster and commit up.
 
-Create a slide deck for the technical panel. (Here's an [example](https://docs.google.com/presentation/d/15rfR-S5qAlzx4rHwBp_kJOlu0nQ7hcZOruTwbH6zRvQ/edit?usp=sharing).)
+Steps to Contribute
 
-* It should focus on *how* you built the app.
-* Include code snippets with brief explanations. Or, specific references to the location of the code in your GitHub repo.
-* It should emphasize your technical setbacks and solutions.
-* Get straight to the point.
-* Be prepared to answer questions. 
+1. An issue can be created on the issues section of the repo's main page. Click "New Issues" and create the issue title and comment a summary of what the issue will resolve. Please assign the issue to yourself and label the issue as an "enhancement."
+2. Create a seperate branch off of premaster with the following commands:
+3. git checkout -b enhancement-(issuenumber)-(yourname)
+4. All of your changes will be saved in this branch. Please remember to command-s to save the changes
+5. Once your changes are ready to be merged to master "Premaster" branch, you can use the command: git add .
+6. Check git status to see that your addition was added. The addition should appear in git status and be in green if added
+7. Use the following command to commit up: git commit -m "short description of your change"
+8. Use the following command to push up: git commit -u origin (nameofbranch) or (enhancement-(issuenumber)-(yourname))
+9. In the repo, after the commit, an option in the pull requests section will say "Compare & Pull Request". Click that to create the Pull Request
+10. For the Pull Request, it can be the name of the branch and the commentary should be "closes #yourissuenumber. For example, if my issue was #2 my PR commentary would be "Closes #2."
+11. The label should be "enhancement" and the reviewers should be 2 of the members of the group. Again, please reference the Who section above
+12. After two members of the group review the code, someone can merge the pull request into the master "premaster"
