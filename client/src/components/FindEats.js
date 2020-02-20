@@ -13,10 +13,11 @@ function FindEats(props) {
   const [apiData, setApiData] = useState([]);
   const [query, setQuery] = useState('food');
   const [search, setSearch] = useState('');
+  const [all, setAll] = useState([]);
   const [budget, setBudget] = useState({
-    cheap: false,
-    average: false,
-    expensive: false
+    cheap: '$',
+    average: '$$',
+    expensive: '$$$'
   });
 
   useEffect(() => {
@@ -49,18 +50,45 @@ function FindEats(props) {
     localStorage.setItem('FAVORITE_RESTAURANTS', JSON.stringify(newFavorites));
   };
 
+  /* Joe 2-19: Added Random function. apidata gets dumped and shuffled which returns the first object, shuffle is random, no need to use math.floor */
   const randomPlace = () => {
     const shuffleData = shuffle(apiData);
     setApiData(shuffleData);
     const randomElement = apiData.slice(0, 1);
     setApiData(randomElement);
-    console.log(randomElement);
   };
 
-  const onChangeCheap = () => {
-    console.log(apiData[1].price);
+  /* Joe 2-19: Hopefully this works. Decided to add this last minute, adding a filter functionality by budget.
+  
+  Yelp uses $ $$ $$$ to represent cost in their API data. onChange functions will filter and show only matched budget.
+  
+  */
 
-    //budget.cheap ? setApiData()
+  const onChangeCheap = e => {
+    setBudget({ cheap: !budget.cheap });
+    if (budget.cheap == '$') {
+      setBudget({ cheap: '' });
+    } else {
+      setBudget({ cheap: '$' });
+    }
+  };
+
+  const onChangeAverage = e => {
+    setBudget({ cheap: !budget.average });
+    if (budget.average == '$$') {
+      setBudget({ average: '' });
+    } else {
+      setBudget({ average: '$$' });
+    }
+  };
+
+  const onChangeExpensive = e => {
+    setBudget({ expensive: !budget.expensive });
+    if (budget.expensive == '$$$') {
+      setBudget({ expensive: '' });
+    } else {
+      setBudget({ expensive: '$$$' });
+    }
   };
 
   return (
@@ -80,8 +108,20 @@ function FindEats(props) {
                   id="cheap"
                   label="Under $10"
                 />
-                <Form.Check type="checkbox" id="average" label="$11 - $30" />
-                <Form.Check type="checkbox" id="expensive" label="Over $30" />
+                <Form.Check
+                  checked={budget.average}
+                  onChange={onChangeAverage}
+                  type="checkbox"
+                  id="average"
+                  label="$11 - $30"
+                />
+                <Form.Check
+                  checked={budget.expensive}
+                  onChange={onChangeExpensive}
+                  type="checkbox"
+                  id="expensive"
+                  label="Over $30"
+                />
               </div>
             </Accordion.Collapse>
           </Card>
@@ -113,8 +153,11 @@ function FindEats(props) {
             apiData.reduce((acc, restaurant) => {
               if (
                 !(
-                  restaurant.image_url &&
-                  restaurant.location.zip_code === '33127'
+                  (restaurant.image_url &&
+                    restaurant.location.zip_code === '33127' &&
+                    restaurant.price == budget.cheap) ||
+                  restaurant.price == budget.average ||
+                  restaurant.price == budget.expensive
                 )
               )
                 return acc;
