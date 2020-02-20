@@ -15,9 +15,9 @@ function FindEats(props) {
   const [search, setSearch] = useState('');
   const [all, setAll] = useState([]);
   const [budget, setBudget] = useState({
-    cheap: '$',
-    average: '$$',
-    expensive: '$$$'
+    cheap: false,
+    average: false,
+    expensive: false
   });
 
   useEffect(() => {
@@ -58,38 +58,64 @@ function FindEats(props) {
     setApiData(randomElement);
   };
 
-  /* Joe 2-19: Hopefully this works. Decided to add this last minute, adding a filter functionality by budget.
-  
-  Yelp uses $ $$ $$$ to represent cost in their API data. onChange functions will filter and show only matched budget.
-  
+  /* Joe 2-19: Hopefully this works. Decided to add this last minute, adding a checkbox filter functionality by budget.
+  Yelp uses $ $$ $$$ to represent cost in their API data. This is messy, there has to be a better way of doing this. 
+  At least it works. Not very DRY
   */
 
   const onChangeCheap = e => {
     setBudget({ cheap: !budget.cheap });
-    if (budget.cheap == '$') {
-      setBudget({ cheap: '' });
-    } else {
-      setBudget({ cheap: '$' });
-    }
   };
 
   const onChangeAverage = e => {
-    setBudget({ cheap: !budget.average });
-    if (budget.average == '$$') {
-      setBudget({ average: '' });
-    } else {
-      setBudget({ average: '$$' });
-    }
+    setBudget({ average: !budget.average });
   };
 
   const onChangeExpensive = e => {
     setBudget({ expensive: !budget.expensive });
-    if (budget.expensive == '$$$') {
-      setBudget({ expensive: '' });
-    } else {
-      setBudget({ expensive: '$$$' });
-    }
   };
+
+  const restList = apiData.reduce((acc, restaurant) => {
+    if (budget.cheap == true) {
+      if (
+        !(
+          restaurant.image_url &&
+          restaurant.location.zip_code === '33127' &&
+          restaurant.price == '$'
+        )
+      )
+        return acc;
+    } else if (budget.average == true) {
+      if (
+        !(
+          restaurant.image_url &&
+          restaurant.location.zip_code === '33127' &&
+          restaurant.price == '$$'
+        )
+      )
+        return acc;
+    } else if (budget.expensive == true) {
+      if (
+        !(
+          restaurant.image_url &&
+          restaurant.location.zip_code === '33127' &&
+          restaurant.price == '$$$'
+        )
+      )
+        return acc;
+    } else {
+      if (!(restaurant.image_url && restaurant.location.zip_code === '33127'))
+        return acc;
+    }
+    acc.push(
+      <RestaurantDetail
+        key={restaurant.id}
+        restaurant={restaurant}
+        addFavorite={addFavorite}
+      />
+    );
+    return acc;
+  }, []);
 
   return (
     <>
@@ -148,29 +174,7 @@ function FindEats(props) {
       </div>
       <div></div>
       {apiData.length > 0 ? (
-        <div className="cards">
-          {apiData &&
-            apiData.reduce((acc, restaurant) => {
-              if (
-                !(
-                  (restaurant.image_url &&
-                    restaurant.location.zip_code === '33127' &&
-                    restaurant.price == budget.cheap) ||
-                  restaurant.price == budget.average ||
-                  restaurant.price == budget.expensive
-                )
-              )
-                return acc;
-              acc.push(
-                <RestaurantDetail
-                  key={restaurant.id}
-                  restaurant={restaurant}
-                  addFavorite={addFavorite}
-                />
-              );
-              return acc;
-            }, [])}
-        </div>
+        <div className="cards">{apiData && restList}}</div>
       ) : (
         <div className="spinner">
           <Loader
@@ -182,6 +186,7 @@ function FindEats(props) {
           />
         </div>
       )}
+      }
     </>
   );
 }
