@@ -60,14 +60,15 @@ label {
 
 #about-members {
   display: flex;
-  padding: 1px 50vh 50px 50vh;
+  padding: 1px 40vh 50px 40vh;
   background: #902786;
   color:#fff;
 }
 
 .member-pics {
   display: block;
-  margin: 10px 1px 10px 1px
+  margin: 10px 1px 10px 1px;
+  max-width: 200px;
 }
 
 .apics {
@@ -117,7 +118,7 @@ label {
   display: flex;
   position: absolute;
   top: 750px;
-  left: 43%;
+  margin-left: 46.8%;
 }
 
 #abold-sum {
@@ -166,9 +167,9 @@ label {
 
 #about-text {
     
-    margin: 5vh 30vh 0 30vh;
+    margin: 5vh 32vh 0 32vh;
     color: #fff;
-    font-size: 34px;
+    font-size: 28px;
     font-weight: 100;
 }
 
@@ -188,6 +189,41 @@ label {
   padding: 20px 0 60px 0;
   border-top: solid 19px #fff;
 }
+
+.github-pic:hover {
+  content: url("./components/pics/github-fx100.png");
+  height:26px;
+}
+
+.github-pic {
+  margin: 5px 5px;
+}
+
+.linkedin-pic {
+  margin: 5px 5px;
+}
+
+.linkedin-pic:hover {
+  content: url("./components/pics/linkedin-fx100.png");
+  height:26px;
+}
+
+
+#food-pic:hover {
+  content: url("./components/pics/food-logo.png")
+}
+
+#food-pic {
+
+  -webkit-animation:spin 6s linear infinite;
+  -moz-animation:spin 6s linear infinite;
+  animation:spin 6s linear infinite;
+
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 /* End About Page CSS */
 /* End About Page CSS */
