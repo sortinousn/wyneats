@@ -16,13 +16,10 @@ import baconr from "./pics/baconr.png";
 import githubPic from "./pics/github-clean100.png"
 import linkedinPic from "./pics/linkedin-clean100.png"
 
+
 export default function About() {
-  let element = document.querySelector("#root");
-  console.log(element.scrollTop);
-  window.addEventListener("scroll", () => {
-    console.log(window.scrollHeight, "X");
-    console.log(window.screenY, "Y");
-  });
+  let element = document.querySelector('#root');
+  window.addEventListener('scroll', () => {});
   return (
     <div id="about-page">
       <AboutBg />
@@ -39,7 +36,9 @@ export default function About() {
             <img src={knifepic} alt=" " />
           </span>
           <span id="scroll-down1">
-            <a href="#abottom-section"><img src={scrollpic} alt=" " /></a>
+            <a href="#abottom-section">
+              <img src={scrollpic} alt=" " />
+            </a>
           </span>
         </span>
       </div>
@@ -64,7 +63,6 @@ export default function About() {
             <h1 class="about-titles">Search</h1>
           </div>
         </div>
-        
       </div>
 
       <div id="abottom-section">
@@ -83,17 +81,12 @@ export default function About() {
                 </p>
             </div>
         </div>
+      </div>
 
-      
       <div id="about-members">
         <div class="member-pics">
           <span id="joe-pic">
-            <img
-              class="apics"
-              src={joe}
-              alt="Smiley face"
-              
-            />
+            <img class="apics" src={joe} alt="Smiley face" />
           </span>
           <span id="joe-about" class="member-about">
           <h4>Joe</h4>
@@ -208,10 +201,8 @@ export default function About() {
             />
           </span>
           <span id="sonia-about" class="member-about">
-          <h4>Sonia</h4>
-            <p>
-            "Permanent messages taught by temporary people. " - Unknown
-            </p>
+            <h4>Sonia</h4>
+            <p>"Permanent messages taught by temporary people. " - Unknown</p>
           </span>
           <div> 
               <span class="github">
@@ -245,10 +236,8 @@ export default function About() {
             />
           </span>
           <span id="dean-about" class="member-about">
-              <h4>Dean</h4>
-            <p>
-            "The secret of getting ahead is getting started" - Mark Twain
-            </p>
+            <h4>Dean</h4>
+            <p>"The secret of getting ahead is getting started" - Mark Twain</p>
           </span>
           <div> 
               <span class="github">
