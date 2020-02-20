@@ -170,7 +170,7 @@ function FindEats(props) {
       </div>
       <div></div>
       {apiData.length > 0 ? (
-        <div className="cards">{apiData && restList}}</div>
+        <div className="cards">{apiData && restList}</div>
       ) : (
         <div className="spinner">
           <Loader
@@ -182,7 +182,6 @@ function FindEats(props) {
           />
         </div>
       )}
-      }
     </>
   );
 }
