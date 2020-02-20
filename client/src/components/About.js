@@ -1,26 +1,22 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import AboutBg from "./AboutBg";
-import joe from "./pics/joe.jpeg";
-import jamile from "./pics/jamile.jpeg";
-import lava from "./pics/lava.jpeg";
-import sonia from "./pics/sonia.jpeg";
-import dean from "./pics/dean.jpeg";
-import atopbg from "./pics/atop.jpg";
-import logopl from "./pics/logo-placeholder.png";
-import forkpic from "./pics/fork.png";
-import knifepic from "./pics/knife.png";
-import scrollpic from "./pics/scroll.png";
-import baconl from "./pics/baconl.png";
-import baconr from "./pics/baconr.png";
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import AboutBg from './AboutBg';
+import joe from './pics/joe.jpeg';
+import jamile from './pics/jamile.jpeg';
+import lava from './pics/lava.jpeg';
+import sonia from './pics/sonia.jpeg';
+import dean from './pics/dean.jpeg';
+import atopbg from './pics/atop.jpg';
+import logopl from './pics/logo-placeholder.png';
+import forkpic from './pics/fork.png';
+import knifepic from './pics/knife.png';
+import scrollpic from './pics/scroll.png';
+import baconl from './pics/baconl.png';
+import baconr from './pics/baconr.png';
 
 export default function About() {
-  let element = document.querySelector("#root");
-  console.log(element.scrollTop);
-  window.addEventListener("scroll", () => {
-    console.log(window.scrollHeight, "X");
-    console.log(window.screenY, "Y");
-  });
+  let element = document.querySelector('#root');
+  window.addEventListener('scroll', () => {});
   return (
     <div id="about-page">
       <AboutBg />
@@ -37,7 +33,9 @@ export default function About() {
             <img src={knifepic} alt=" " />
           </span>
           <span id="scroll-down1">
-            <a href="#abottom-section"><img src={scrollpic} alt=" " /></a>
+            <a href="#abottom-section">
+              <img src={scrollpic} alt=" " />
+            </a>
           </span>
         </span>
       </div>
@@ -62,39 +60,30 @@ export default function About() {
             <h1 class="about-titles">Search</h1>
           </div>
         </div>
-        
       </div>
 
       <div id="abottom-section">
-            <div id="about-ppg">
-                <h3 id="about-htext">About WynEats</h3>
-                <p id="about-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur.
-                </p>
-            </div>
+        <div id="about-ppg">
+          <h3 id="about-htext">About WynEats</h3>
+          <p id="about-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.
+          </p>
         </div>
+      </div>
 
-      
       <div id="about-members">
         <div class="member-pics">
           <span id="joe-pic">
-            <img
-              class="apics"
-              src={joe}
-              alt="Smiley face"
-              
-            />
+            <img class="apics" src={joe} alt="Smiley face" />
           </span>
           <span id="joe-about" class="member-about">
-          <h4>Joe</h4>
-            <p>
-            "The secret of getting ahead is getting started" - Mark Twain
-            </p>
+            <h4>Joe</h4>
+            <p>"The secret of getting ahead is getting started" - Mark Twain</p>
           </span>
         </div>
         <div class="member-pics">
@@ -108,10 +97,8 @@ export default function About() {
             />
           </span>
           <span id="jamile-about" class="member-about">
-          <h4>Jamile</h4>
-            <p>
-            "The secret of getting ahead is getting started" - Mark Twain
-            </p>
+            <h4>Jamile</h4>
+            <p>"The secret of getting ahead is getting started" - Mark Twain</p>
           </span>
         </div>
         <div class="member-pics">
@@ -125,10 +112,8 @@ export default function About() {
             />
           </span>
           <span id="lava-about" class="member-about">
-          <h4>Lava</h4>
-            <p>
-            "The secret of getting ahead is getting started" - Mark Twain
-            </p>
+            <h4>Lava</h4>
+            <p>"The secret of getting ahead is getting started" - Mark Twain</p>
           </span>
         </div>
         <div class="member-pics">
@@ -142,10 +127,8 @@ export default function About() {
             />
           </span>
           <span id="sonia-about" class="member-about">
-          <h4>Sonia</h4>
-            <p>
-            "Permanent messages taught by temporary people. " - Unknown
-            </p>
+            <h4>Sonia</h4>
+            <p>"Permanent messages taught by temporary people. " - Unknown</p>
           </span>
         </div>
         <div class="member-pics">
@@ -159,10 +142,8 @@ export default function About() {
             />
           </span>
           <span id="dean-about" class="member-about">
-              <h4>Dean</h4>
-            <p>
-            "The secret of getting ahead is getting started" - Mark Twain
-            </p>
+            <h4>Dean</h4>
+            <p>"The secret of getting ahead is getting started" - Mark Twain</p>
           </span>
         </div>
       </div>

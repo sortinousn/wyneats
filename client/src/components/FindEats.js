@@ -4,35 +4,30 @@ import Button from 'react-bootstrap/Button';
 import RestaurantDetail from './RestaurantDetail';
 import { parseStringifiedJSON } from '../helpers';
 import Loader from 'react-loader-spinner';
-var shuffle = require('shuffle-array')
+var shuffle = require('shuffle-array');
 
 function FindEats(props) {
   const [apiData, setApiData] = useState([]);
   const [query, setQuery] = useState('food');
   const [search, setSearch] = useState('');
 
-
   useEffect(() => {
-    //    if (query === '') return;
     const getApiData = async () => {
       const result = await axios.get(
         `/api/restaurants/search/:wynwood/${query}`
       );
       setApiData(result.data);
-      console.log(apiData)
     };
     getApiData();
   }, [query]);
 
   const handleChange = event => {
     setSearch(event.target.value);
-    console.log(search);
   };
 
   const handleSubmit = event => {
     event.preventDefault();
     setQuery(search);
-    console.log(query);
   };
 
   const addFavorite = restaurant => {
@@ -43,14 +38,11 @@ function FindEats(props) {
   };
 
   const randomPlace = () => {
-
-    const shuffleData = shuffle(apiData)
+    const shuffleData = shuffle(apiData);
     setApiData(shuffleData);
-    const randomElement = apiData.slice(0, 1)
-    setApiData(randomElement)
-    console.log(randomElement)
-
-  }
+    const randomElement = apiData.slice(0, 1);
+    setApiData(randomElement);
+  };
 
   return (
     <>
@@ -65,13 +57,17 @@ function FindEats(props) {
           <Button type="submit" className="search-button">
             Find Eats!
           </Button>
-          <Button variant="info" type="submit" onClick={() => randomPlace()} className="search-button">
-        Random
-        </Button>
+          <Button
+            variant="info"
+            type="submit"
+            onClick={() => randomPlace()}
+            className="search-button"
+          >
+            Random
+          </Button>
         </form>
       </div>
-      <div>
-      </div>
+      <div></div>
       {apiData.length > 0 ? (
         <div className="cards">
           {apiData &&
