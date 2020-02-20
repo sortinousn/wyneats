@@ -11,7 +11,7 @@
   padding-right: 200px;
   display: block;
 }
-label {
+#contact-form label {
   color: white;
   font-weight: bold;
   -webkit-text-stroke: 1px #fe98f4;
@@ -62,7 +62,7 @@ label {
   display: flex;
   padding: 1px 40vh 50px 40vh;
   background: #902786;
-  color:#fff;
+  color: #fff;
 }
 
 .member-pics {
@@ -73,8 +73,8 @@ label {
 
 .apics {
   border-radius: 50%;
-  width:110px;
-  height:auto;
+  width: 110px;
+  height: auto;
 }
 
 .member-about {
@@ -166,11 +166,10 @@ label {
 }
 
 #about-text {
-    
-    margin: 5vh 32vh 0 32vh;
-    color: #fff;
-    font-size: 28px;
-    font-weight: 100;
+  margin: 5vh 32vh 0 32vh;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 100;
 }
 
 #about-ppg {
@@ -178,10 +177,10 @@ label {
 }
 
 #about-htext {
-    color: #fff;
-    font-size: 85px;
-    font-weight: 200;
-    margin: 10vh 0vh 0 0;
+  color: #fff;
+  font-size: 85px;
+  font-weight: 200;
+  margin: 10vh 0vh 0 0;
 }
 
 #abottom-section {
@@ -191,8 +190,8 @@ label {
 }
 
 .github-pic:hover {
-  content: url("./components/pics/github-fx100.png");
-  height:26px;
+  content: url('./components/pics/github-fx100.png');
+  height: 26px;
 }
 
 .github-pic {
@@ -204,26 +203,36 @@ label {
 }
 
 .linkedin-pic:hover {
-  content: url("./components/pics/linkedin-fx100.png");
-  height:26px;
+  content: url('./components/pics/linkedin-fx100.png');
+  height: 26px;
 }
 
-
 #food-pic:hover {
-  content: url("./components/pics/food-logo.png")
+  content: url('./components/pics/food-logo.png');
 }
 
 #food-pic {
-
-  -webkit-animation:spin 6s linear infinite;
-  -moz-animation:spin 6s linear infinite;
-  animation:spin 6s linear infinite;
-
+  -webkit-animation: spin 6s linear infinite;
+  -moz-animation: spin 6s linear infinite;
+  animation: spin 6s linear infinite;
 }
 
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 
 /* End About Page CSS */
 /* End About Page CSS */

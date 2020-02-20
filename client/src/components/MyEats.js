@@ -11,6 +11,7 @@ const Favorites = () => {
     setFavorites(parsedFavorites);
   }, []);
 
+  /* Joe 2-19: Removes favorited item from local storage, tried to use slice, wouldn't work right. */
   const removeFavorite = restaurant => {
     const favoriteRestaurants = localStorage.getItem('FAVORITE_RESTAURANTS');
     const parsedFavorites = parseStringifiedJSON(favoriteRestaurants, []) || [];
