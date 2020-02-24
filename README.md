@@ -19,7 +19,7 @@ WynEats was built using React.
 
 `yarn install` inside inside root folder and then `yarn install` in client
 
-add .env into your folder and add the `CLIENT_ID` & `YELP_API_KEY` into the file. 
+add .env into root folder for the Yelp API. Add the `CLIENT_ID` & `YELP_API_KEY` to the .env file. 
 
 `Yarn Dev`in root folder will start server and client
 
