@@ -1,4 +1,5 @@
 import React from 'react';
+import './Header.css';
 
 function Header() {
   return (
@@ -6,14 +7,9 @@ function Header() {
       <div id="header-container">
         <div id="logo">
           <a href="/">
-            <img
-              className="wynlogo"
-              alt="wynlogo"
-              src={require('../assets/logo_v2.png')}
-              width="220"
-              height="150"
-              margin-left="100px"
-            />
+            <h1 className="wynlogo" alt="wynlogo">
+              WynEats
+            </h1>
           </a>
         </div>
         <div id="menu">

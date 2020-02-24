@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import FindEats from './components/FindEats';
+import FindEats from './components/FindEats/FindEats';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Contact from './components/Contact';
-import Home from './components/Home';
-import MyEats from './components/MyEats';
-import About from './components/About';
+import Contact from './components/Contact/Contact';
+import Home from './components/Home/Home';
+import MyEats from './components/MyEats/MyEats';
+import About from './components/About/About';
 
 function App() {
   return (

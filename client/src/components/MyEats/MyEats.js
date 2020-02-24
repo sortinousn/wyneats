@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useReducer } from 'react';
-import { parseStringifiedJSON } from '../helpers';
-import RestaurantDetail from './RestaurantDetail';
+import { parseStringifiedJSON } from '../../helpers';
+import RestaurantDetail from '../RestaurantDetail/RestaurantDetail';
+import './MyEats.css';
 
 const Favorites = () => {
   const [favorites, setFavorites] = useState([]);
@@ -35,7 +36,7 @@ const Favorites = () => {
           ))}
         </div>
       ) : (
-        <h1 className="favorites">No Favorites Yet</h1>
+        <h1 className="favorites">No Favorites Yet...</h1>
       )}
     </>
   );

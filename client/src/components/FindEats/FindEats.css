@@ -1,0 +1,61 @@
+.findeats-bg {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -10;
+  top: 0;
+  position: absolute;
+}
+
+.filter-style {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: left;
+  margin-right: 20px;
+}
+
+.filter-card {
+  width: 200px;
+}
+
+.find-form {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.search-button {
+  margin-left: 20px;
+}
+
+.find-input {
+  height: 46px;
+  width: 300px;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 136px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.spinner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+}

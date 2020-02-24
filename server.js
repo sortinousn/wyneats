@@ -28,7 +28,7 @@ app.get('/api/restaurants/search/:location/:term', (request, response) => {
   const termSearch = term && term !== 'undefined' ? `&term=${term}` : '';
   axios
     .get(
-      `https://api.yelp.com/v3/businesses/search?categories=restaurants${locationSearch}${termSearch}&limit=50`,
+      `https://api.yelp.com/v3/businesses/search?categories=restaurants${locationSearch}${termSearch}`,
       {
         headers: {
           Authorization: `Bearer ${process.env.YELP_API_KEY}`

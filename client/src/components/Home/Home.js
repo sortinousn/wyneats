@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
-import BCKG from '../assets/wynwood.jpeg';
-import Header from './Header';
+import BCKG from '../../assets/wynwood.jpeg';
+import Header from '../Header/Header';
+import './Home.css';
 
 function Home(props) {
   const handleOnClick = () => {

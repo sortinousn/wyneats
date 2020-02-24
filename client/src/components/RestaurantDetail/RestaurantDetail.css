@@ -1,0 +1,13 @@
+.card-img {
+  height: 250px;
+  object-fit: cover;
+  width: 286px;
+}
+
+.text-muted {
+  color: #902786 !important;
+}
+
+.detail-button {
+  margin-right: 20px;
+}

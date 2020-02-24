@@ -4,9 +4,11 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import Accordion from 'react-bootstrap/Accordion';
-import RestaurantDetail from './RestaurantDetail';
-import { parseStringifiedJSON } from '../helpers';
+import RestaurantDetail from '../RestaurantDetail/RestaurantDetail';
+import { parseStringifiedJSON } from '../../helpers';
 import Loader from 'react-loader-spinner';
+import './FindEats.css';
+
 var shuffle = require('shuffle-array');
 
 function FindEats(props) {
@@ -54,11 +56,6 @@ function FindEats(props) {
     setApiData(randomElement);
   };
 
-  /* Joe 2-19: Hopefully this works. Decided to add this last minute, adding a checkbox filter functionality by budget.
-  Yelp uses $ $$ $$$ to represent cost in their API data. This is messy, there has to be a better way of doing this. 
-  At least it works. Not very DRY
-  */
-
   const onChangeCheap = e => {
     setBudget({ cheap: !budget.cheap });
   };
@@ -97,7 +94,7 @@ function FindEats(props) {
     }, []);
 
   return (
-    <>
+    <div className="findeats-bg">
       <div className="search">
         <Accordion className="filter-style">
           <Card className="filter-card">
@@ -165,7 +162,7 @@ function FindEats(props) {
           />
         </div>
       )}
-    </>
+    </div>
   );
 }
 
