@@ -17,9 +17,10 @@ WynEats was built using React.
 
 ## Install
 
-yarn install
-add .env into your folder and add the CLIENT_ID & YELP_API_KEY into the file. You can reach out to a code owner(listed under the Who) for these details
+`yarn install` inside inside root folder and then `yarn install` in client
 
-To run the application, Yarn install needs to be run in the premaster branch and inside client. Then Yarn Dev or Yarn Start can be run to view the application on the local host 3000.
+add .env into your folder and add the `CLIENT_ID` & `YELP_API_KEY` into the file. 
+
+`Yarn Dev`in root folder will start server and client
 
 
