@@ -8,9 +8,9 @@ The project is a work in progress. The backend still needs to be setup.
 
 ### Screenshots
 Landing Page:
-![Mainpage](./client/src/components/Mainpage.png)
+![Mainpage](./client/src/assets/Mainpage.png)
 Favorites:
-![favorites](./client/src/components/favorites.png)
+![favorites](./client/src/assets/favorites.png)
 
 ### Why
 After weeks of trying to find recommendations to eat around Wynwood at Wyncode Academy, our group saw a need to create a food site for restaurants exclusive to Wynwood. In addition to searching for new restuarants, we wanted to create a feature that enages the user to favorite the restaurants he or she wants to remember or refer others too. The app also has a feature that picks a random restaurant in case the user doesn't want the burder of having to pick!
