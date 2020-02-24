@@ -5,10 +5,8 @@ WynEats is an application designed to give the people of Wynwood a quick and eng
 
 
 ### Screenshots
-Landing Page:
-![Mainpage](./client/src/assets/Mainpage.png)
-Favorites:
-![favorites](./client/src/assets/favorites.png)
+
+![Action](./client/src/assets/wyneats.gif)
 
 
 ### How:
