@@ -15,15 +15,6 @@ Favorites:
 ### Why
 After weeks of trying to find recommendations to eat around Wynwood at Wyncode Academy, our group saw a need to create a food site for restaurants exclusive to Wynwood. In addition to searching for new restuarants, we wanted to create a feature that enages the user to favorite the restaurants he or she wants to remember or refer others too. The app also has a feature that picks a random restaurant in case the user doesn't want the burder of having to pick!
 
-### Who
-Jamile Reid
-Joseph Sortino
-Sonia St.Remy
-Lavonnyka Howell
-Dean Lovett
-
-Members of cohort 36 in Wyncode Academy
-
 ### How:
 Dependencies
 WynEats was built using React. Our group used Visual Studio as our code editor.
