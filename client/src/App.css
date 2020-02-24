@@ -16,7 +16,7 @@
 }
 
 .background-img {
-  background-image: url(./components/wynwood.jpeg);
+  background-image: url(../src/assets/wynwood.jpeg);
   display: flex;
   position: absolute;
   top: 0;
@@ -133,17 +133,15 @@ a:hover {
   padding-top: 80px;
 }
 
-.logo{
-padding-left: 30px;
-
+.logo {
+  padding-left: 30px;
 }
 
-.text-muted{
-  color: #902786 !important
+.text-muted {
+  color: #902786 !important;
 }
 
-
-.filter-style{
+.filter-style {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -152,11 +150,6 @@ padding-left: 30px;
   margin-right: 20px;
 }
 
-.filter-card{
-
-width: 200px
-
-
-
-
+.filter-card {
+  width: 200px;
 }

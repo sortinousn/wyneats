@@ -71,47 +71,30 @@ function FindEats(props) {
     setBudget({ expensive: !budget.expensive });
   };
 
-  const restList = apiData.reduce((acc, restaurant) => {
-    if (budget.cheap == true) {
-      if (
-        !(
-          restaurant.image_url &&
-          restaurant.location.zip_code === '33127' &&
-          restaurant.price == '$'
-        )
-      )
-        return acc;
-    } else if (budget.average == true) {
-      if (
-        !(
-          restaurant.image_url &&
-          restaurant.location.zip_code === '33127' &&
-          restaurant.price == '$$'
-        )
-      )
-        return acc;
-    } else if (budget.expensive == true) {
-      if (
-        !(
-          restaurant.image_url &&
-          restaurant.location.zip_code === '33127' &&
-          restaurant.price == '$$$'
-        )
-      )
-        return acc;
-    } else {
+  const restList = apiData
+
+    .filter(data =>
+      budget.cheap
+        ? data.price == '$'
+        : budget.average
+        ? data.price == '$$'
+        : budget.expensive
+        ? data.price == '$$$'
+        : data
+    )
+    .reduce((acc, restaurant) => {
       if (!(restaurant.image_url && restaurant.location.zip_code === '33127'))
         return acc;
-    }
-    acc.push(
-      <RestaurantDetail
-        key={restaurant.id}
-        restaurant={restaurant}
-        addFavorite={addFavorite}
-      />
-    );
-    return acc;
-  }, []);
+      acc.push(
+        <RestaurantDetail
+          key={restaurant.id}
+          restaurant={restaurant}
+          addFavorite={addFavorite}
+          price={restaurant.price}
+        />
+      );
+      return acc;
+    }, []);
 
   return (
     <>
@@ -174,7 +157,7 @@ function FindEats(props) {
       ) : (
         <div className="spinner">
           <Loader
-            type="Puff"
+            type="TailSpin"
             color="#00BFFF"
             height={100}
             width={100}

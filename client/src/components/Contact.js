@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import BCKG from './wynwood.jpeg';
+import BCKG from '../assets/wynwood.jpeg';
 
 class Contact extends React.Component {
   constructor(props) {
