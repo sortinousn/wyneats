@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import BCKG from './wynwood.jpeg';
-import Header from './Header'
+import BCKG from '../assets/wynwood.jpeg';
+import Header from './Header';
 
 function Home(props) {
   const handleOnClick = () => {

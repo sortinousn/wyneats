@@ -83,7 +83,7 @@ label {
 }
 
 #atop {
-  background-image: url('./components/pics/atop.jpg');
+  background-image: url('../src/assets/atop.jpg');
   padding: 0px 0px;
   height: 400px;
 }
@@ -190,7 +190,7 @@ label {
 }
 
 .github-pic:hover {
-  content: url('./components/pics/github-fx100.png');
+  content: url('../src/assets/github-fx100.png');
   height: 26px;
 }
 
@@ -203,12 +203,12 @@ label {
 }
 
 .linkedin-pic:hover {
-  content: url('./components/pics/linkedin-fx100.png');
+  content: url('../src/assets/linkedin-fx100.png');
   height: 26px;
 }
 
 #food-pic:hover {
-  content: url('./components/pics/food-logo.png');
+  content: url('../src/assets/food-logo.png');
 }
 
 #food-pic {

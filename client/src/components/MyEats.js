@@ -22,16 +22,22 @@ const Favorites = () => {
   };
 
   return (
-    <div className="cards">
-      {favorites.map(restaurant => (
-        <RestaurantDetail
-          favorite={restaurant.id}
-          key={restaurant.id}
-          restaurant={restaurant}
-          removeFavorite={removeFavorite}
-        />
-      ))}
-    </div>
+    <>
+      {favorites.length > 0 ? (
+        <div className="cards">
+          {favorites.map(restaurant => (
+            <RestaurantDetail
+              favorite={restaurant.id}
+              key={restaurant.id}
+              restaurant={restaurant}
+              removeFavorite={removeFavorite}
+            />
+          ))}
+        </div>
+      ) : (
+        <h1 className="favorites">No Favorites Yet</h1>
+      )}
+    </>
   );
 };
 

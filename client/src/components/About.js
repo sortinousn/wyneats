@@ -1,20 +1,20 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AboutBg from './AboutBg';
-import joe from './pics/joe.jpeg';
-import jamile from './pics/jamile.jpeg';
-import lava from './pics/lava.jpeg';
-import sonia from './pics/sonia.jpeg';
-import dean from './pics/dean.jpeg';
-import atopbg from './pics/atop.jpg';
-import logopl from './pics/food-pictop1.png';
-import forkpic from './pics/forkw.png';
-import knifepic from './pics/knifew.png';
-import scrollpic from './pics/scrolls.png';
-import baconl from './pics/baconl.png';
-import baconr from './pics/baconr.png';
-import githubPic from './pics/github-clean100.png';
-import linkedinPic from './pics/linkedin-clean100.png';
+import joe from '../assets/joe.jpeg';
+import jamile from '../assets/jamile.jpeg';
+import lava from '../assets/lava.jpeg';
+import sonia from '../assets/sonia.jpeg';
+import dean from '../assets/dean.jpeg';
+import atopbg from '../assets/atop.jpg';
+import logopl from '../assets/food-pictop1.png';
+import forkpic from '../assets/forkw.png';
+import knifepic from '../assets/knifew.png';
+import scrollpic from '../assets/scrolls.png';
+import baconl from '../assets/baconl.png';
+import baconr from '../assets/baconr.png';
+import githubPic from '../assets/github-clean100.png';
+import linkedinPic from '../assets/linkedin-clean100.png';
 
 export default function About() {
   let element = document.querySelector('#root');
